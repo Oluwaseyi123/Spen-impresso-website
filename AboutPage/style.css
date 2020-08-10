@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 3%;
+}
+
+.nav-links{
+
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+.nav-links li a{
+    position: relative;
+    display: inline-block;
+    transition: all 0.8s ease 0;
+    text-decoration: none;
+    color: #400943;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.nav-links li a:after{
+    display: block;
+    content: '';
+    height: 4px;
+    transform: scaleX(0.0001);  
+    background:#400943;
+    transition: transform 250ms ease-in-out;
+    box-shadow: inset -40px 0px 30px -25px #fff, inset 40px 0px 30px -25px #fff
+}
+
+.nav-links li a:hover:after{
+    transform: scaleX(1);
+}
+.name{
+    color: #400943;
+    font-size: 21px;
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+.whoWeAre, .servicesWeProvide{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    justify-content: center;
+    text-align: center;
+    margin: 60px 60px 50px 60px;
+    
+}
+.sub-heading{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #400943;
+}
+.sub-paragraph, .savings{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+.logo{
+display: flex;
+}
+.arrow{
+    display: inline-flex;
+
+}
+.about{
+    text-decoration: none;
+    color: #400943;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300px;
+}
+.sub-sections{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    margin: 0 auto;
+}
+.section{
+    border:none;
+    width: 330px;
+    height: 380px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 5);
+}
+.services{
+    margin-bottom: 10px;
+}
+.loans{
+    font-family: 'Poppins', sans-serif;
+    color: #400943;
+    
+}
+.savings{
+    text-align: left;
+    padding:0px 20px 0px 20px;
+    margin-top: 5px;
+}
+
+.meetOurCustomers{
+    align-items: center;
+    text-align: center;
+}
+
+.mission, .vision{
+    text-align: center;
+    margin: 30px 60px 30px 60px;
+
+}
+.ceo{
+    font-size: 24px;
+    color: #400943;
+    font-family:'Poppins', sans-serif;
+}
+
+.fromOurCeo{
+    margin: 20px 0px 20px 60px;
+    display: flex;
+    width: 90%;
+}
+
+.ceoMessage{
+    margin: 100px 0px 30px 90px;
+    font-weight: 300;
+    font-family:'Poppins', sans-serif;
+    width: 50%;
+    line-height: 29px;
+}
+
+.coreValues{
+    margin: 10px 20px 30px 60px;
+    font-weight: 300;
+    font-family:'Poppins', sans-serif;
+    line-height: 29px;
+}
+.meetOurStaffs{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px 20px 60px;
+
+}
+.images{
+    width: 300px;
+    height: 300px;
+}
+.oops{
+   width: 300px;
+   text-align: left;
+   font-weight: 300;
+   font-family:'Poppins', sans-serif;
+}
+.getInTouch{
+    width: 100%;
+    height: 450px;
+    background-color: #0A1829;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+}
+.idkk{
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+.idk{
+    padding-bottom: 15px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 90px 0px 0px 300px;
+}
+.input-field{
+    width: 500px;
+    height: 20px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid white;
+    color: white;
+    margin-bottom: 10px;
+    outline: none;
+}
+form button{
+    cursor: pointer;
+}
+.submit-btn{
+    width: 100px;
+    margin-top: 15px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 2px;
+    border: none;
+    background: #400943;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+.submit-btn:hover{
+    cursor: pointer;
+}
+.testimonialss{
+    
+    display: flex;
+    margin: 20px;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 5);
+}
+.meetOurCustomers{
+    align-items: center;
+    text-align: center;
+}
