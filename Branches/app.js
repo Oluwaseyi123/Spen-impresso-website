@@ -6,7 +6,7 @@ document.querySelector('.calculate-btn').addEventListener('click', (e)=>{
     
     document.querySelector('.gif').style.display='block'
 
-    setTimeout(calculateResults, 3000)
+    setTimeout(calculateResults, 2000)
     e.preventDefault()
 })
 
@@ -19,30 +19,44 @@ function calculateResults(){
           totalInterest=document.querySelector('.totalInterest'),
           weeklyPayment=document.querySelector('.weeklyPayment'),
           monthlyPayment=document.querySelector('.monthlyPayment')
+          
 
     if(amount!=='' || interest!=='' || duration!==''){
-        const monthlyInterest=(interest/100) * amount,
-              totalInt=monthlyInterest*duration,
-              totalAmnt=totalInt+amount
+        const amnt=Number(amount)
+        const int=Number(interest)
+        const dur= Number(duration)
+        const monthlyInterest=(int/100) * amnt,
+              totalInt=monthlyInterest*dur,
+              totalAmnt=totalInt+amnt,
+              processingFee=(5/100)*amnt
 
-        totalAmount.value=(totalInt+amount)
+        totalAmount.value=(totalInt+amnt)
         totalInterest.value=totalInt
-        monthlyPayment.value=totalAmnt/duration
-        weeklyPayment.value=totalAmnt/52
+        monthlyPayment.value=(totalAmnt/dur).toFixed(2)
+        weeklyPayment.value=(totalAmnt/52).toFixed(2)
 
-        console.log(amount, interest, duration)
+        
         document.querySelector('.second-part').style.display='block'
         document.querySelector('.gif').style.display='none'
         
     }else{
         document.querySelector('.gif').style.display='none'
-        console.log('empty')
-    }
+        showError('Please fill the input fields', 'error')
+    } 
+}
+
+function showError(message, classname){
+    const div=document.createElement('div')
     
+    div.appendChild(document.createTextNode(message))
+    div.className=classname
+    const loanCalculator= document.querySelector('.loanCalculator')
+    const heading= document.querySelector('.loan-heading')
 
+    loanCalculator.insertBefore(div, heading)
 
-
-
-   
+    setTimeout(function(){
+        document.querySelector('.error').remove()
+    }, 3000)
     
 }
